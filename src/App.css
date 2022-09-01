@@ -1,0 +1,148 @@
+#root, html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.app {
+  height: 150vh;
+  background: linear-gradient( rgba(228, 14, 14, 0.3), rgba(21, 117, 213, 0.17) ), url('./images/home-background.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.top-card {
+  margin: auto;
+  width: 30%;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1%;
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(185, 34, 34, 0.8);
+}
+
+.advice-card {
+  margin: auto;
+  width: 50%;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 2%;
+  box-shadow: 0 0 10px rgba(185, 34, 34, 0.8);
+}
+
+.search-card {
+  margin: auto;
+  background: #f4f4f4;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 25px;
+  padding: 2%;
+  box-shadow: 0 0 10px rgba(185, 34, 34, 0.8);
+}
+
+.grow:hover {
+  transform: scale(1.05);
+  transition-duration: 1s;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-form input {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.button {
+  position: relative;
+  text-decoration: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 35px;
+  width: 200px;
+  background-color: rgba(28, 146, 220, 0.8);
+}
+  
+.button span {
+  color: #000000;
+  font-size: 12px;
+  font-weight: 800;
+}
+  
+.button:hover {
+  animation: rotate 0.7s ease-in-out both;
+}
+  
+.button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+  
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+  25% {
+    transform: rotate(3deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3deg) translate3d(0, 0, 0);
+  }
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+  
+@keyframes storm {
+  0% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+  25% {
+    transform: translate3d(4px, 0, 0) translateZ(0);
+  }
+  50% {
+    transform: translate3d(-3px, 0, 0) translateZ(0);
+  }
+  75% {
+    transform: translate3d(2px, 0, 0) translateZ(0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}  
+
+@media(max-width: 768px) {
+  .advice-card, .search-card {
+      width: 80%;
+  }
+  .top-card {
+    width: 50%;
+  }
+  .app {
+    height: 200vh;
+  }
+}
